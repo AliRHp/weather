@@ -1,0 +1,420 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hp.alirezas.weather01.fragment.CityFragment">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/htab_collapse_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:fitsSystemWindows="true"
+                    android:gravity="right"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:title="@string/تهران"
+
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fitsSystemWindows="true"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        app:layout_collapseMode="parallax">
+
+                        <LinearLayout
+                            android:id="@+id/main_state_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#30000000"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp">
+
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/main"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_gravity="center"
+                                android:tint="#ffffff"
+                                app:srcCompat="@drawable/sunny_vector"
+                                tools:ignore="MissingPrefix" />
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/mainText"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:includeFontPadding="false"-->
+                            <!--android:text="آفتابی"-->
+                            <!--android:textColor="@color/colorText"-->
+                            <!--android:textSize="18sp" />-->
+
+
+                            <com.hp.alirezas.weather01.views.MyTextView
+                                android:id="@+id/main_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:includeFontPadding="false"
+                                android:text="27"
+                                android:textColor="@color/colorText"
+                                android:textSize="100sp" />
+
+
+                            <ImageView
+                                android:id="@+id/degreeImage"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="30dp"
+                                android:src="@drawable/celsius1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/htab_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_horizontal"
+                        android:minHeight="50dp"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:titleMarginTop="13dp">
+
+                        <com.hp.alirezas.weather01.views.MyTextView
+                            android:id="@+id/year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:text="1395"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+                        <com.hp.alirezas.weather01.views.MyTextView
+                            android:id="@+id/month_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:text="مرداد"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+                        <com.hp.alirezas.weather01.views.MyTextView
+                            android:id="@+id/day_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:text="4"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+                        <com.hp.alirezas.weather01.views.MyTextView
+                            android:id="@+id/day_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="یکشنبه"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+                        <com.hp.alirezas.weather01.views.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="آخرین بروز رسانی : "
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+
+                    </android.support.v7.widget.Toolbar>
+
+
+                    <!--<android.support.design.widget.TabLayout-->
+                    <!--android:id="@+id/htab_tabs"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="?attr/actionBarSize"-->
+                    <!--android:layout_gravity="bottom"-->
+                    <!--app:tabIndicatorColor="@android:color/white" />-->
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:background="#50000000"-->
+                            <!--android:gravity="center"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:padding="10dp">-->
+
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_marginLeft="5dp"-->
+
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:paddingTop="5dp">-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_vertical"-->
+                                    <!--android:padding="2dp"-->
+                                    <!--android:text="اذان صبح"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:id="@+id/morning"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:paddingRight="5dp"-->
+                                    <!--android:text="5:12"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+                            <!--</LinearLayout>-->
+
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_marginLeft="5dp"-->
+
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:padding="3dp">-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_vertical"-->
+                                    <!--android:text="طلوع آفتاب "-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:id="@+id/sunrise"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:paddingRight="5dp"-->
+                                    <!--android:text="5:12"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+
+                            <!--</LinearLayout>-->
+
+                            <!--<LinearLayout-->
+
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_marginLeft="5dp"-->
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:padding="3dp">-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:text="اذان طهر"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:id="@+id/noon"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:paddingRight="5dp"-->
+                                    <!--android:text="5:12"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+
+                            <!--</LinearLayout>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="5dp"-->
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical">-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:text="غروب آفتاب"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:id="@+id/sunset"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:paddingRight="5dp"-->
+                                    <!--android:text="5:12"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+
+                            <!--</LinearLayout>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_marginLeft="5dp"-->
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:padding="3dp">-->
+
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:text="اذان مغرب"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:id="@+id/west"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:paddingRight="5dp"-->
+                                    <!--android:text="5:12"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+
+                            <!--</LinearLayout>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_marginLeft="5dp"-->
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:padding="3dp">-->
+
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:text="نیمه شب"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+                                <!--<com.hp.alirezas.weather01.views.MyTextView-->
+                                    <!--android:id="@+id/midnight"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:paddingRight="5dp"-->
+                                    <!--android:text="5:12"-->
+                                    <!--android:textColor="@color/colorText"-->
+                                    <!--android:textSize="18sp" />-->
+
+
+                            <!--</LinearLayout>-->
+
+
+                        <!--</LinearLayout>-->
+                    <include
+                        layout="@layout/prayer_times"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:padding="3dp" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@android:drawable/divider_horizontal_dim_dark"></android.support.v7.widget.RecyclerView>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@android:color/darker_gray"
+                        android:padding="3dp" />
+
+                    <include
+
+                        layout="@layout/weather_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</FrameLayout>

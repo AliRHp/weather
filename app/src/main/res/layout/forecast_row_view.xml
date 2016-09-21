@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            app:cardBackgroundColor="#00000000">
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/low_temp1"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <com.hp.alirezas.weather01.views.MyTextView
+                        android:id="@+id/low"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:includeFontPadding="false"
+                        android:text="22"
+                        android:textColor="@color/colorText"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/celsius1" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/high_temp1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <com.hp.alirezas.weather01.views.MyTextView
+                        android:id="@+id/high"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:includeFontPadding="false"
+                        android:text="22"
+                        android:textColor="@color/colorText"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/celsius1" />
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/main_forecast"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/cloud"
+                    app:srcCompat="@drawable/sunny"
+                    tools:ignore="MissingPrefix"
+                    android:tint="#ffffff"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <com.hp.alirezas.weather01.views.MyTextView
+                        android:layout_marginRight="2dp"
+                        android:id="@+id/forecast_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="95/8/8"
+                        android:textColor="@color/colorText"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/forecast_day_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="یکشنبه"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+

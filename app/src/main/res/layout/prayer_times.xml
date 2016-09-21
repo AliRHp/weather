@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#50000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+             >
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="اذان صبح"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/morning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="5dp"
+                android:text="5:12"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+
+            android:layout_marginRight="7dp"
+            android:gravity="center"
+            android:orientation="vertical"
+             >
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="طلوع آفتاب "
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/sunrise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="5dp"
+                android:text="5:12"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center"
+            android:orientation="vertical"
+             >
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="اذان ظهر"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/noon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="5dp"
+                android:text="5:12"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="غروب آفتاب"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/sunset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="5dp"
+                android:text="5:12"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center"
+            android:orientation="vertical"
+             >
+
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="اذان مغرب"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/west"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="5dp"
+                android:text="5:12"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center"
+            android:orientation="vertical"
+             >
+
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="نیمه شب"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/midnight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="5dp"
+                android:text="5:12"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

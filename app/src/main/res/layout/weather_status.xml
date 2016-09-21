@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:divider="@android:drawable/divider_horizontal_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="5"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="%"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="رطوبت نسبی :"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/small_mist" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:text="11231.25"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="فشار:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+            <ImageView
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity=""
+                android:layout_margin="5dp"
+                android:src="@drawable/pressure" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="2dp"
+                android:text="5"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="km/s"
+                android:textColor="@color/colorText"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="سرعت باد:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/wind" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:id="@+id/chill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:text="25"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.hp.alirezas.weather01.views.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="دمای باد:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/thermometr" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
